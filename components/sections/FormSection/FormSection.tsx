@@ -32,7 +32,6 @@ export const FormSection: React.FC = () => {
       defaultValues: defaultValues
   });
 
-  const bridgeData = useSelector((state: RootState) => state.bridgeReducer.bridge);
   const { open, close } = useAppKit();
   const { address, isConnected: isConnectedReown, caipAddress, status } = useAppKitAccount();
   const { isConnected } = useAccount();
@@ -220,25 +219,7 @@ export const FormSection: React.FC = () => {
     return 1;
   }
 
-  const getStepText = () => {
-    const currentStep = getCurrentStep();
 
-    if (currentStep === 1) {
-      return {text: bridgeData?.step1Text, title: bridgeData?.stepText + " 1/5", step: 1};
-    }
-    if (currentStep === 2) {
-      return {text: bridgeData?.step2Text, title: bridgeData?.stepText + " 2/5", step: 2};
-    }
-    if (currentStep === 3) {
-      return {text: bridgeData?.step3Text, title: bridgeData?.stepText + " 3/5", step: 3};
-    }
-    if (currentStep === 4) {
-      return {text: bridgeData?.step4Text, title: bridgeData?.stepText + " 4/5", step: 4};
-    }
-    if (currentStep === 5) {
-      return {text: bridgeData?.step5Text, title: bridgeData?.stepText + " 5/5", step: 5};
-    }
-  }
 
   // useEffect(() => {console.log(form.formState.errors)}, [form.formState]);
   // useEffect(() => {console.log(currentOrder)}, [currentOrder]);
@@ -253,22 +234,13 @@ export const FormSection: React.FC = () => {
   useEffect(() => {
     form.setValue("wallet", address);
     form.setValue("network", caipNetwork?.name);
-    // console.log("bridgeData", caipNetwork?.name,  form.watch("network"));
   }, [isConnected, address, caipNetwork]);
   
   if(applicationState === "success") {
     return (
       <ContentWrapper customStyles={wrapperStyles}>
         <div className={styles.done_wrapper}>
-          <div>
-            {bridgeData?.DoneTitle}
-          </div>
-          <span>
-            {bridgeData?.DoneText}
-          </span>
-          <div>
-            {bridgeData?.DoneTouch}
-          </div>
+          Done
         </div>
       </ContentWrapper>
     )
@@ -278,9 +250,7 @@ export const FormSection: React.FC = () => {
     return (
       <ContentWrapper customStyles={wrapperStyles}>
         <div className={styles.done_wrapper}>
-          <div>
-            {bridgeData?.ErrorText}
-          </div>
+          Error
         </div>
       </ContentWrapper>
     )
@@ -292,24 +262,10 @@ export const FormSection: React.FC = () => {
         <div className={styles.formWrapper}>
           <header className={styles.formHeader}>
             <div className={styles.headerContent}>
-              <h1 className={styles.headerTitle}>{bridgeData?.FormSectionTitle}</h1>
-              <Icons.ArrowRight className={styles.headerIcon} />
             </div>
             <p className={styles.headerDescription}>
-              {bridgeData?.FormSectionDescription}
             </p>
 
-            <div className={styles.steps}>
-                {(() => {
-                const stepText = getStepText();
-                return (
-                  <>
-                  <div className={styles.steps_title}>{stepText?.title}</div>
-                  <div className={styles.steps_text}>{stepText?.text}</div>
-                  </>
-                );
-                })()}
-            </div>
           </header>
 
           <FormProvider {...form}>
@@ -324,24 +280,22 @@ export const FormSection: React.FC = () => {
                   {/* <div className={styles.networkSelection}> */}
                     {/* <WalletInfo type="short" />  */}
                   {/* </div> */}
-                  {!currentOrder && <Button variant={form.watch("data_reliability") ? "primary" : "secondary"} onClick={form.handleSubmit(tempCreateOrder)}>2. {bridgeData?.FormSectionDocumentsButton}</Button>}
-                  {currentFile && !currentFileSignature && <Button variant="primary" onClick={tempSignFile}>4. {bridgeData?.FormSectionWeb3Button}</Button>}
-                  {currentFileSignature && <Button variant={form.getValues().transfer_confirm ? "primary" : "secondary"} onClick={tempTransfer}>5. {bridgeData?.FormContragentTransactionbutton}</Button>}
+                  {!currentOrder && <Button variant={form.watch("data_reliability") ? "primary" : "secondary"} onClick={form.handleSubmit(tempCreateOrder)}>2. send</Button>}
+                  {currentFile && !currentFileSignature && <Button variant="primary" onClick={tempSignFile}>4. send</Button>}
+                  {currentFileSignature && <Button variant={form.getValues().transfer_confirm ? "primary" : "secondary"} onClick={tempTransfer}>5. send</Button>}
 
                   {currentOrder && !currentFile && 
                     <div className={styles.contract} onClick={tempDownloadFile}>
                       <Button className={styles.contract_download} variant="primary">
-                        3. {bridgeData?.DownloadContract}
+                        3. download
                         <Icons.Download fill="White" />
                       </Button>
                       <div className={styles.contract_nameWrapper}>
-                        <div className={styles.contract_name}>{bridgeData?.ContractName}</div>
-                        <div className={styles.contract_fileName}>{currentOrder?.draft_files?.[0]?.filename}</div>
                       </div>
                     </div>
                   }
                 </> : 
-                <Button variant="primary" onClick={() => open()}>1. {bridgeData?.FormSectionConnect}</Button>
+                <Button variant="primary" onClick={() => open()}>1. connect</Button>
                 }
               </div>
             </form>

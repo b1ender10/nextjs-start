@@ -1,0 +1,86 @@
+@use "@/styles/mixins" as *;
+
+.formGroup {
+  margin-bottom: 13px;
+  position: relative;
+}
+
+.formGrid {
+  display: flex;
+  margin-top: 13px;
+  width: 100%;
+  flex-direction: column;
+}
+
+.formColumn {
+  flex: 1;
+  min-width: 240px;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  min-width: 240px;
+  width: 100%;
+
+  @include minus-576 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.formActions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 13px;
+  padding: 10px 0;
+
+  @include minus-576 {
+    justify-content: center;
+  }
+
+  &_loader {
+    margin: auto;
+  }
+}
+
+.amount_wrapper {
+  position: relative;
+
+  &_wallet {
+    position: absolute;
+    left: -150px;
+    top: calc(50% + 15px);
+    transform: translateY(-50%);
+
+    @include minus-576 {
+      left: -20px;
+      top: calc(100% - 20px);
+      transform: none;
+    }
+  }
+}
+
+.input_address {
+  font-size: 12px;
+}
+
+@media (max-width: 991px) {
+  .formPage {
+    padding: 100px 0px;
+  }
+
+  .formWrapper,
+  .mainForm,
+  .formGrid,
+  .formColumn,
+  .formActions {
+    max-width: 100%;
+  }
+
+  .buttonPrimary,
+  .buttonSecondary {
+    padding: 13px 20px;
+  }
+}

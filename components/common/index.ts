@@ -11,6 +11,3 @@ export {Tab} from "./Tab/Tab";
 export {WalletInfo} from "./WalletInfo/WalletInfo";
 export {AccordionItem} from "./AccordionItem/AccordionItem";
 export {FormInput, FormInputField} from "./FormInput/FormInput";
-export {TableHeader} from "./ProfitHistoryTable/TableHeader";
-export {TableRow as HistoryTableRow} from "./ProfitHistoryTable/TableRow";
-export {TokenStats} from "./TokenStats/TokenStats";

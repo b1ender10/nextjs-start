@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { FAQSection, GreenSection } from "@/components/sections";
+import { MainSection } from "@/components/sections";
 import { RootState, storeWrapper } from "@/store";
 import { fetchAPI, useCloseModal } from "@/lib";
 import { setFooter, setHeader, setHome, setNews } from "@/store/homeSlice";
@@ -13,16 +13,7 @@ const LandingPage: React.FC = () => {
 
   return (
     <>
-      <GreenSection 
-        title={homeData?.GreenSectionFutureTitle}
-        description={homeData?.GreenSectionFutureDescription}
-      />
-      <GreenSection 
-        title={homeData?.GreenSectionSupportTitle}
-        description={homeData?.GreenSectionSupportDescription}
-      >
-      </GreenSection>
-      <FAQSection />
+      <MainSection/>
     </>
   );
 };
