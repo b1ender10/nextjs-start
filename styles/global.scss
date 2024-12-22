@@ -1,0 +1,86 @@
+@import "@radix-ui/themes/styles.css";
+@import "@radix-ui/colors/black-alpha.css";
+@import "@radix-ui/colors/violet.css";
+
+
+:root {
+  --Black: #232323;
+  --White: #fff;
+  --Purple: #84388a;
+  --Purple-dark: #4a2072;
+  --Lignt-Blue: #82d0ff;
+  --Blue: #44B9FF;
+  --Green: #39A459;
+
+  --Green-rut: #30C288;
+  --Emerald: #01565B;
+  --Emerald-dark: #0D6C4D;
+  --Emerald-37: #498C71;
+  --Emerald-40: #B3DFBB;
+  --Emerald-ultra-light: #E5F9F8;
+  --Emerald-grad : #42BC96;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Sora",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'Sora',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.pageWrapper {
+  font-family: Inter, sans-serif;
+}
+
+// radix checkbox
+
+/* reset */
+button {
+	all: unset;
+}
+
+.error {
+  color: var(--light-red, #e47373);
+  font: 600 12px / 2 SF UI Display, -apple-system, Roboto, Helvetica, sans-serif;
+  margin-top: 5px;
+  display: block;
+}

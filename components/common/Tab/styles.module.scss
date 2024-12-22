@@ -1,0 +1,28 @@
+@use "@/styles/mixins" as *;
+
+
+
+.tabNav {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  border-bottom: 1px solid #e1f2e4;
+  margin-bottom: 20px;
+}
+
+.tab,
+.tabActive {
+  padding: 8px 16px;
+  font: 700 14px SF UI Display, -apple-system, Roboto, Helvetica, sans-serif;
+  color: var(--Emerald, #01565b);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tabActive {
+  border-bottom: 2px solid var(--Emerald, #01565b);
+}
+
+

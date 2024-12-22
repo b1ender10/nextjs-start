@@ -1,0 +1,13 @@
+/.idea/
+/dist/
+/Makefile
+/docker-compose.yml
+/node_modules/
+/build/
+
+.DS_Store
+
+**/api.codegen.d.ts
+
+.env
+.gitlab-ci.yml

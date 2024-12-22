@@ -1,0 +1,43 @@
+@use "@/styles/mixins" as *;
+
+
+.amountWrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  .currencyIcon {
+    margin-top: 5px;
+  }
+
+  &_big {
+    .amount {
+      font: 700 59px Sora, sans-serif;
+
+      @include minus-992 {
+        font-size: 40px;
+      }
+    }
+
+    .currencyIcon {
+      img {
+        width: 35px;
+
+        @include minus-992 {
+          width: 27px;
+        }
+      }
+    }
+  }
+
+  &_small {
+    .amount {
+      font: 700 18px Sora, sans-serif;
+    }
+  }
+}
+
+.amount {
+  color: var(--Black, #232323);
+  word-break: break-all; 
+}

@@ -1,0 +1,104 @@
+@use "@/styles/mixins" as *;
+
+.container {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    @include minus-992 {
+        padding: 100px 0px;
+        max-width: 100%;
+    }
+}
+
+.heading {
+    width: 1080px;
+    max-width: 100%;
+    color: var(--Emerald, #01565b);
+    text-align: center;
+    font: 700 39px Sora, sans-serif;
+}
+
+.featuresContainer {
+    display: flex;
+    margin-top: 38px;
+    width: 800px;
+    max-width: 100%;
+    flex-direction: column;
+}
+
+.featureCard {
+    border-radius: 31px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 31px;
+    padding: 26px 52px;
+    margin-top: 26px;
+
+    @include minus-992 {
+        padding: 0 20px;
+    }
+
+    @include minus-768 {
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.featureIcon {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 130px;
+    align-self: stretch;
+    margin: auto 0;
+
+    @include minus-768 {
+        margin: auto;
+    }
+}
+
+.featureContent {
+    align-self: stretch;
+    display: flex;
+    min-width: 240px;
+    flex-direction: column;
+    flex: 1;
+    flex-basis: 0%;
+    margin: auto 0;
+
+    @include minus-992 {
+        max-width: 100%;
+    }
+}
+
+.featureTitle {
+    color: var(--Emerald, #01565b);
+    flex: 1;
+    font: 600 23px Sora, sans-serif;
+
+    @include minus-992 {
+        max-width: 100%;
+    }
+
+    @include minus-768 {
+        text-align: center;
+    }
+}
+
+.featureDescription {
+    color: var(--Black, #232323);
+    margin-top: 12px;
+    font: 400 14px/28px SF Pro Text, -apple-system, Roboto, Helvetica, sans-serif;
+
+    @include minus-992 {
+        max-width: 100%;
+    }
+
+    @include minus-768 {
+        text-align: center;
+    }
+}

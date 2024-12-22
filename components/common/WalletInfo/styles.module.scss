@@ -1,0 +1,44 @@
+@use "@/styles/mixins" as *;
+
+
+
+.walletInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 16px 0;
+
+  @include minus-768 {
+    border-bottom: 1px solid #e1f2e4;
+  }
+}
+
+.networkInfo {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.networkName {
+  font: 700 16px SF UI Display, -apple-system, Roboto, Helvetica, sans-serif;
+  color: var(--Emerald-dark, #0d6c4d);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.addressButton {
+  border-radius: 7px;
+  font: 600 14px SF UI Display, -apple-system, Roboto, Helvetica, sans-serif;
+  color: var(--White, #fff);
+}
+
+.balanceInfo {
+  padding: 26px 0;
+
+  &_loader {
+    margin: auto;
+  }
+}
+

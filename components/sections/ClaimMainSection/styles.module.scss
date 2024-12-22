@@ -1,0 +1,216 @@
+@use "@/styles/mixins" as *;
+
+.balanceSection {
+  margin-top: 26px;
+  width: 100%;
+  max-width: 1080px;
+
+  @include minus-768 {
+    text-align: center;
+  }
+}
+
+.balanceHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include minus-768 {
+    flex-direction: column-reverse;
+  }
+}
+
+.balanceCard {
+  border-radius: 37px;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.tabNav {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  border-bottom: 1px solid #e1f2e4;
+  margin-bottom: 20px;
+}
+
+.tab,
+.tabActive {
+  padding: 8px 16px;
+  font: 700 14px SF UI Display, -apple-system, Roboto, Helvetica, sans-serif;
+  color: var(--Emerald, #01565b);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tabActive {
+  border-bottom: 2px solid var(--Emerald, #01565b);
+}
+
+.walletInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 16px 0;
+
+  @include minus-768 {
+    border-bottom: 1px solid #e1f2e4;
+  }
+}
+
+.networkInfo {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.networkName {
+  font: 700 16px SF UI Display, -apple-system, Roboto, Helvetica, sans-serif;
+  color: var(--Emerald-dark, #0d6c4d);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.addressButton {
+  border-radius: 7px;
+  font: 600 14px SF UI Display, -apple-system, Roboto, Helvetica, sans-serif;
+  color: var(--White, #fff);
+}
+
+.balanceInfo {
+  padding: 26px 0;
+
+  &_loader {
+    margin: auto;
+  }
+}
+
+.balanceTitle {
+  color: var(--Black, #232323);
+  font: 400 16px Sora, sans-serif;
+  margin: 0 0 20px;
+}
+
+.mainBalance {
+  display: flex;
+  align-items: center;
+  gap: 31px;
+  margin-bottom: 20px;
+
+  @include minus-992 {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.amountWrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  .currencyIcon {
+    margin-top: 5px;
+  }
+
+  &_big {
+    .amount {
+      font: 700 59px Sora, sans-serif;
+
+      @include minus-992 {
+        font-size: 40px;
+      }
+    }
+
+    .currencyIcon {
+      img {
+        width: 35px;
+
+        @include minus-992 {
+          width: 27px;
+        }
+      }
+    }
+  }
+
+  &_small {
+    .amount {
+      font: 700 18px Sora, sans-serif;
+    }
+  }
+}
+
+.amount {
+  color: var(--Black, #232323);
+  word-break: break-all; 
+}
+
+.withdrawButton {
+  border-radius: 7px;
+  background: var(--Green, #30c288);
+  color: var(--White, #fff);
+  padding: 13px 26px;
+  font: 600 14px SF UI Display, -apple-system, Roboto, Helvetica, sans-serif;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: darken(#30c288, 5%);
+  }
+
+  @include minus-992 {
+    padding: 13px 20px;
+  }
+}
+
+.percentageInfo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+
+  @include minus-768 {
+    justify-content: center;
+    flex-direction: column-reverse;
+  }
+}
+
+.percentage {
+  color: var(--Green, #30c288);
+  font: 700 28px Inter, sans-serif;
+}
+
+.percentageLabel {
+  color: var(--gray, #7b7b7b);
+  font: 400 13px/2 SF Pro Text, -apple-system, Roboto, Helvetica, sans-serif;
+}
+
+.transactionInfo {
+  display: flex;
+  gap: 20px;
+
+  @include minus-992 {
+    flex-direction: column;
+  }
+}
+
+.transactionItem {
+  flex: 1;
+}
+
+.transactionLabel {
+  color: var(--gray, #7b7b7b);
+  font: 400 13px/2 SF Pro Text, -apple-system, Roboto, Helvetica, sans-serif;
+  display: block;
+  margin-bottom: 8px;
+}
+.transactionAmount {
+  @include minus-992 {
+    justify-content: center;
+  }
+}

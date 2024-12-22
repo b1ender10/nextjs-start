@@ -1,0 +1,15 @@
+.pageContainer {
+  z-index: 0;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  color: var(--Emerald, #01565b);
+  justify-content: start;
+}
+
+@media (max-width: 991px) {
+  .pageContainer {
+    max-width: 100%;
+    // padding: 100px 0 0 20px;
+  }
+}

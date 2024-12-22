@@ -1,0 +1,135 @@
+@use "@/styles/mixins" as *;
+
+.page {
+  display: flex;
+  width: 100%;
+}
+
+.content {
+  align-items: start;
+  background: var(--White, #fff);
+  display: flex;
+  width: 1135px;
+  max-width: 100%;
+  gap: 40px 78px;
+  padding: 78px;
+  flex-wrap: wrap;
+
+  @include minus-992 {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+}
+
+.statsSection {
+  flex: 1;
+  min-width: 240px;
+  display: flex;
+  flex-direction: column;
+}
+
+.statsContainer {
+  background: var(--White, #fff);
+  border-radius: 8px;
+  padding: 20px 0px;
+  margin-top: 12px;
+}
+
+.header {
+  margin-bottom: 12px;
+}
+
+.title {
+  color: var(--Black, #232323);
+  font: 22px Sora, sans-serif;
+}
+
+.subtitle {
+  color: var(--Black, #232323);
+  font: 16px/20px SF Pro Text, -apple-system, Roboto, Helvetica, sans-serif;
+  margin-top: 12px;
+}
+
+.statContainer {
+  margin-bottom: 12px;
+}
+
+.statHeader {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.statLabel {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+  color: var(--Black, #232323);
+  // font: 13px/26px SF Pro Text, -apple-system, Roboto, Helvetica, sans-serif;
+  font: 20px/26px SF Pro Text, -apple-system, Roboto, Helvetica, sans-serif;
+
+  @include minus-992 {
+    margin: auto;
+  }
+}
+
+.infoIcon {
+  aspect-ratio: 0.91;
+  width: 23px;
+  object-fit: contain;
+  margin-left: 3px;
+}
+
+.amount {
+  color: var(--Lignt-Emerald, #39a180);
+  font: 35px Sora, sans-serif;
+}
+
+.netCirculation {
+  color: var(--gray, #7b7b7b);
+  font: 16px/2 SF Pro Text, sans-serif;
+  margin-top: 5px;
+}
+
+.infoSection {
+  flex: 1;
+  min-width: 240px;
+  padding-right: 78px;
+
+  @include minus-992 {
+    padding-right: 0px;
+  }
+}
+
+.infoTitle {
+  color: var(--Emerald, #01565b);
+  font: 700 39px Sora, sans-serif;
+  margin-top: 0px;
+}
+
+.infoText {
+  color: var(--Black, #232323);
+  font: 400 19px/29px SF Pro Text, -apple-system, Roboto, Helvetica, sans-serif;
+  margin-top: 26px;
+}
+
+@include minus-992 {
+  .page {
+    // padding: 100px 0 0 20px;
+  }
+
+  .content {
+    padding: 20px;
+  }
+
+  .statsSection,
+  .infoSection,
+  .statsContainer,
+  .statContainer,
+  .amount,
+  .netCirculation,
+  .title,
+  .subtitle {
+    max-width: 100%;
+  }
+}

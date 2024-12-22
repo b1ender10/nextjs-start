@@ -1,0 +1,85 @@
+.card {
+    border-radius: 31px;
+    background-color: rgba(255, 255, 255, 0.4);
+    display: flex;
+    min-width: 240px;
+    flex-direction: column;
+    font-family: Inter, sans-serif;
+    justify-content: center;
+    flex: 1;
+    flex-basis: 0%;
+    padding: 40px;
+  }
+  
+  @media (max-width: 991px) {
+    .card {
+      max-width: 100%;
+      padding: 20px;
+    }
+  }
+  
+  .content {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: start;
+  }
+  
+  .header {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    font-size: 23px;
+    color: var(--Emerald, #01565b);
+    font-weight: 600;
+    justify-content: center;
+  }
+  
+  .icon {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 33px;
+
+    @media (max-width: 768px) {
+      margin: auto;
+    }
+  }
+  
+  .walletName {
+    margin-top: 12px;
+  }
+  
+  .connectButton {
+    align-self: start;
+    border-radius: 100px;
+    background: var(--Emerald, #01565b);
+    margin-top: 12px;
+    gap: 10px;
+    font-size: 17px;
+    color: var(--White, #fff);
+    font-weight: 500;
+    white-space: nowrap;
+    padding: 10px 30px;
+    outline: none;
+    border: none;
+
+    @media (max-width: 768px) {
+      align-self: center;
+    }
+  }
+  
+  @media (max-width: 991px) {
+    .connectButton {
+      white-space: initial;
+      padding: 10px 20px;
+    }
+  }
+  
+  .description {
+    color: var(--Black, #232323);
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 26px;
+    margin-top: 12px;
+  }

@@ -1,0 +1,97 @@
+@use "@/styles/mixins" as *;
+
+
+
+.balanceInfo {
+  padding: 26px 0;
+
+  &_loader {
+    margin: auto;
+  }
+}
+
+.balanceTitle {
+  color: var(--Black, #232323);
+  font: 400 16px Sora, sans-serif;
+  margin: 0 0 20px;
+}
+
+.mainBalance {
+  display: flex;
+  align-items: center;
+  gap: 31px;
+  margin-bottom: 20px;
+
+  @include minus-992 {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+
+
+.withdrawButton {
+  border-radius: 7px;
+  background: var(--Green, #30c288);
+  color: var(--White, #fff);
+  padding: 13px 26px;
+  font: 600 14px SF UI Display, -apple-system, Roboto, Helvetica, sans-serif;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: darken(#30c288, 5%);
+  }
+
+  @include minus-992 {
+    padding: 13px 20px;
+  }
+}
+
+.percentageInfo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+
+  @include minus-768 {
+    justify-content: center;
+    flex-direction: column-reverse;
+  }
+}
+
+.percentage {
+  color: var(--Green, #30c288);
+  font: 700 28px Inter, sans-serif;
+}
+
+.percentageLabel {
+  color: var(--gray, #7b7b7b);
+  font: 400 13px/2 SF Pro Text, -apple-system, Roboto, Helvetica, sans-serif;
+}
+
+.transactionInfo {
+  display: flex;
+  gap: 20px;
+
+  @include minus-992 {
+    flex-direction: column;
+  }
+}
+
+.transactionItem {
+  flex: 1;
+}
+
+.transactionLabel {
+  color: var(--gray, #7b7b7b);
+  font: 400 13px/2 SF Pro Text, -apple-system, Roboto, Helvetica, sans-serif;
+  display: block;
+  margin-bottom: 8px;
+}
+.transactionAmount {
+  @include minus-992 {
+    justify-content: center;
+  }
+}

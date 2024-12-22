@@ -1,0 +1,54 @@
+.button {
+  width: max-content;
+  display: block;
+}
+
+.buttonPrimary {
+  align-self: stretch;
+  border-radius: 7px;
+  background: var(--Green, #30c288);
+  color: var(--White, #fff);
+  padding: 13px 26px;
+  border: none;
+  cursor: pointer;
+  
+  @media (max-width: 991px) {
+    padding: 13px 20px;
+  }
+
+  &:hover {
+    background: #2e936b;
+  }
+}
+
+.buttonSecondary {
+  align-self: stretch;
+  border-radius: 7px;
+  border: 1px solid var(--Emerald-37, rgba(73, 140, 113, 0.37));
+  color: var(--Emerald-dark, #0d6c4d);
+  padding: 13px 26px;
+  background: transparent;
+  cursor: pointer;
+  
+  @media (max-width: 991px) {
+    padding: 13px 20px;
+  }
+
+  &:hover {
+    background: rgba(73, 140, 113, 0.1);
+  }
+}
+
+.buttonTertiary {
+  align-self: stretch;
+  border-radius: 7px;
+  border: 1px solid transparent;
+  color: var(--Emerald-dark, #0d6c4d);
+  padding: 13px 26px;
+  background: transparent;
+  cursor: pointer;
+  
+  @media (max-width: 991px) {
+    padding: 13px 20px;
+  }
+}

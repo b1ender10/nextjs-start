@@ -1,0 +1,35 @@
+.contentWrapper {
+    width: 100%;
+    padding: 130px 0px;
+    position: relative;
+
+
+
+    @media (max-width: 991px) {
+        padding: 20px 0px;
+    }
+
+    &_first {
+        padding-top: 230px;
+
+        @media (max-width: 991px) {
+            padding-top: 150px;
+        }
+    }
+}
+
+.content {
+    max-width: 1070px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media (max-width: 991px) {
+    .content {
+        // max-width: 100%;
+        padding: 0px 40px;
+    }
+}

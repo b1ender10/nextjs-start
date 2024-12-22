@@ -1,0 +1,110 @@
+@use "@/styles/mixins" as *;
+
+.content {
+    min-width: 220px;
+    background-color: white;
+    border-radius: 6px;
+    padding: 5px;
+    box-shadow:
+        0 10px 38px -10px rgba(22, 23, 24, 0.35),
+        0px 10px 20px -15px rgba(22, 23, 24, 0.2);
+    animation-duration: 400ms;
+    animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform, opacity;
+    z-index: 1;
+
+    @include minus-576 {
+        width: 300px;
+    }
+}
+
+.trigger {
+    font-size: 13px;
+    line-height: 1;
+    color: var(--violet-11);
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    // height: 25px;
+    position: relative;
+    user-select: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.item {
+    cursor: pointer;
+    text-align: center;
+    padding: 5px 10px;
+}
+
+
+// dropwdown field
+
+
+.trigger_field {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    width: max-content;
+    color: var(--black, #000);
+    cursor: pointer;
+    
+    &_disabled {
+        opacity: 0.4;
+    }
+
+    label {
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    height: 40px;
+
+    border-radius: 2px;
+    border: 1px solid var(--Emerald-grad, #42bc96);
+    background: var(--Light-green, #f9fffd);
+    padding: 10px;
+    width: 100%;
+    min-height: 45px;
+    font: 400 16px SF Pro Text, -apple-system, Roboto, Helvetica, sans-serif;
+
+    &_error {
+        border: 1px solid var(--light-red, #e47373);
+        // color: var(--red, red);
+    }
+}
+
+.options {
+    display: grid;
+    gap: 8px;
+    padding: 8px 14px;
+
+    label {
+        cursor: pointer;
+    }
+
+    .selected {
+        font-weight: 600;
+    }
+}
+
+.label {
+    pointer-events: none;
+    color: var(--gray, #7b7b7b);
+    font: 600 12px/2 SF UI Display, -apple-system, Roboto, Helvetica, sans-serif;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.rotate {
+    transform: rotate(180deg);
+}
+
+.error_text {
+    color: var(--light-red, #e47373);
+    font: 600 12px/2 SF UI Display, -apple-system, Roboto, Helvetica, sans-serif;
+    margin-top: 5px;
+    display: block;
+}
+

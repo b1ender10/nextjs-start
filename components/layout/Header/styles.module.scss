@@ -1,0 +1,242 @@
+@use "@/styles/mixins" as *;
+
+.navigation {
+  background-color: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  z-index: 3;
+  display: flex;
+  min-height: 110px;
+  width: 1603px;
+  max-width: 100%;
+  align-items: center;
+  gap: 40px 116px;
+  font-family: SF UI Display, -apple-system, Roboto, Helvetica, sans-serif;
+  font-weight: 700;
+  justify-content: start;
+  flex-wrap: wrap;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, 0);
+  height: 110px;
+  padding: 20px 20px 20px 48px;
+
+  position: fixed;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+
+  @include minus-992 {
+    justify-content: space-between;
+    gap: 0;
+  }
+}
+
+.logo {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 70px;
+  align-self: stretch;
+}
+
+.mobileMenu {
+  display: none;
+
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 7px;
+  border: 1px solid var(--Emerald-37);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-direction: column;
+  position: relative;
+
+  &_active {
+
+    span {
+      &:nth-child(1) {
+        top: calc(50%) !important;
+        transform: rotate(45deg);
+      }
+  
+      &:nth-child(2) {
+        background-color: transparent !important;
+      }
+  
+      &:nth-child(3) {
+        top: calc(50%) !important;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+  
+  span {
+    display: block;
+    width: 10px;
+    height: 1px;
+    background-color: var(--Emerald);
+    border-radius: 2px;
+    position: absolute;
+
+    top: 50%;
+    transform: translate(0, -50%);
+
+    &:nth-child(1) {
+      top: calc(50% - 4px);
+    }
+
+    &:nth-child(3) {
+      top: calc(50% + 4px);
+    }
+  }
+
+  @include minus-992 {
+    display: flex;
+  }
+}
+
+.navLinks {
+  position: relative;
+  align-self: stretch;
+  display: flex;
+  min-width: 240px;
+  align-items: center;
+  gap: 26px;
+  font-size: 16px;
+  color: var(--Emerald-dark, #0d6c4d);
+  justify-content: start;
+  flex-wrap: wrap;
+  flex: 1;
+  flex-basis: 0%;
+  margin: auto 0;
+  z-index: 3;
+
+  @include minus-992 {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    background: var(--Emerald-ultra-light);
+    border-radius: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 100%;
+    width: 100%;
+
+    &_active {
+      display: flex;
+    }
+  }
+}
+
+.navLink {
+  align-self: stretch;
+  gap: 4px;
+  white-space: nowrap;
+  margin: auto 0;
+  cursor: pointer;
+
+  @include minus-992 {
+    padding: 20px 20px 0px 20px;
+    text-align: center;
+
+    &:last-child {
+      padding-bottom: 20px;
+    }
+  }
+
+  &:hover {
+    color: var(--Green-rut);
+  }
+
+  &_active {
+    color: var(--Green-rut);
+  }
+}
+
+.languageTabs {
+  border-radius: 18px;
+  align-self: stretch;
+  display: flex;
+  align-items: start;
+  font-size: 11px;
+  color: var(--Emerald, #01565b);
+  white-space: nowrap;
+  justify-content: start;
+  margin: auto 0;
+}
+
+.languageTab {
+  align-self: stretch;
+  background: var(--Light-green, #f9fffd);
+  box-shadow: 0px -1px 0px 0px #e1f2e4 inset;
+  background-color: var(--Light-green, #f9fffd);
+  gap: 2px;
+  padding: 8px 10px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.languageTabActive {
+  box-shadow: 0px -1px 0px 0px #01565b inset;
+}
+
+.addressLanguageWrapper {
+  position: relative;
+
+  .addressWrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+  }
+}
+
+@include minus-992 {
+  .navigation {
+    max-width: 100%;
+    padding-left: 20px;
+  }
+
+  .navLinks {
+    max-width: 100%;
+  }
+
+  .navLink {
+    white-space: initial;
+  }
+
+  .languageTabs {
+    white-space: initial;
+  }
+
+  .languageTab,
+  .languageTabActive {
+    white-space: initial;
+  }
+}
+
+
+.navigation_bottom {
+  display: none;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  height: 59px;
+  background: var(--Emerald-ultra-light);
+  z-index: 3;
+
+  @include minus-992 {
+    display: flex;
+  }
+
+  &_item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+}

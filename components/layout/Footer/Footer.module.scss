@@ -1,0 +1,161 @@
+@use "@/styles/mixins" as *;
+
+.footer {
+  align-items: center;
+  width: 100%;
+  gap: 40px 130px;
+  color: var(--White, #fff);
+  justify-content: start;
+  font: 400 15px/26px SF Pro Text, -apple-system, Roboto, Helvetica, sans-serif;
+ 
+}
+
+.contentWrapper {
+  align-self: stretch;
+  display: flex;
+  min-width: 240px;
+  width: 100%;
+  align-items: center;
+  gap: 16px;
+  justify-content: start;
+  flex-wrap: wrap;
+  flex: 1;
+  flex-basis: 0%;
+  margin: 130px auto 0 auto;
+
+  @include minus-992 {
+    max-width: 100%;
+  }
+}
+
+.copyrightText {
+  align-self: stretch;
+  flex: 1;
+  flex-basis: 0%;
+  margin: auto 0;
+
+  @include minus-992 {
+    max-width: 100%;
+  }
+}
+
+.socials {
+  aspect-ratio: 11.9;
+  object-fit: contain;
+  object-position: center;
+  width: 299px;
+  background-blend-mode: luminosity;
+  align-self: stretch;
+  min-width: 240px;
+  margin: auto 0;
+}
+
+
+// copyright
+
+
+.container {
+  display: flex;
+  width: 1080px;
+  gap: 40px 130px;
+  justify-content: start;
+  flex-wrap: wrap;
+
+  @include minus-992 {
+    max-width: 100%;
+  }
+}
+
+.brand {
+  display: flex;
+  min-width: 240px;
+  flex-direction: column;
+  width: 242px;
+}
+
+.logoWrapper {
+  display: flex;
+  min-height: 93px;
+  width: 93px;
+  gap: 9px;
+}
+
+.logo {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 100%;
+  flex: 1;
+}
+
+.description {
+  color: var(--White, #fff);
+  margin-top: 31px;
+  font: 400 14px/28px SF Pro Text, -apple-system, Roboto, Helvetica, sans-serif;
+}
+
+.navigation {
+  display: flex;
+  min-width: 240px;
+  align-items: center;
+  gap: 26px;
+  justify-content: start;
+  flex-wrap: wrap;
+  height: 100%;
+  flex: 1;
+
+  @include minus-1200 {
+    max-width: 100%;
+    flex-direction: column;
+  }
+}
+
+.menu {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  flex: 1;
+  // margin: auto 0;
+}
+
+.menuTitle {
+  background: var(
+    --Emerald-grad,
+    linear-gradient(154deg, #42bc96 -127.17%, #2fb78a 83.48%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font: 400 19px SF Pro Text, -apple-system, Roboto, Helvetica, sans-serif;
+}
+
+.menuLinks {
+  display: flex;
+  margin-top: 38px;
+  flex-direction: column;
+  gap: 19px;
+}
+
+.menuLink {
+  color: var(--White, #fff);
+  font: 200 17px SF UI Display, -apple-system, Roboto, Helvetica, sans-serif;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.menuLink:hover,
+.menuLink:focus {
+  text-decoration: underline;
+  outline: none;
+}
+
+@include minus-992 {
+  .footer {
+    padding: 100px 0px;
+  }
+
+  .menuLink {
+    white-space: normal;
+  }
+}

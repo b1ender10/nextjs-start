@@ -1,0 +1,31 @@
+.CheckboxRoot {
+	background-color: white;
+	min-width: 25px;
+	min-height: 25px;
+	border-radius: 4px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    border: 1px solid var(--Emerald-grad, #42bc96);
+
+	&_disabled {
+		opacity: 0.4;
+
+		&:hover {
+			cursor: default !important;
+		}
+	}
+}
+
+.CheckboxRoot:hover {
+    cursor: pointer;
+}
+.CheckboxIndicator {
+	color: var(--violet-11);
+}
+
+.Label {
+	padding-left: 15px;
+	font-size: 15px;
+	line-height: 1;
+}

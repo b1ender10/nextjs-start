@@ -1,0 +1,63 @@
+@use "@/styles/mixins" as *;
+
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  gap: 31px;
+  margin-top: 26px;
+  font: 200 17px SF UI Display, -apple-system, Roboto, Helvetica, sans-serif;
+}
+
+.pageButton {
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+
+  &_arrow {
+    opacity: 0.1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    
+  }
+
+  &_active {
+    opacity: 1;
+  }
+
+  &_prev {
+    transform: rotate(-90deg);
+  }
+
+  &_next {
+    transform: rotate(90deg);
+  }
+}
+
+.activePage {
+  // color: var(--Emerald, #01565b);
+  color: var(--Green-rut);
+  font-weight: 800;
+}
+
+@include minus-992 {
+  .container {
+    padding: 0 20px 100px;
+  }
+
+  .header,
+  .content,
+  .controls,
+  .table,
+  .tableHeader,
+  .tableRow {
+    max-width: 100%;
+  }
+
+  .walletAddress {
+    padding: 0 20px;
+  }
+}

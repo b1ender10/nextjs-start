@@ -1,0 +1,66 @@
+.tableRow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(237, 241, 254, 0.28);
+    border-radius: 9px;
+    padding: 2px 2px 2px 10px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .date {
+    color: #7b7b7b;
+  }
+  
+  .amount {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: #232323;
+    font-weight: 600;
+    line-height: 26px;
+    flex: 1;
+    min-width: 240px;
+  }
+  
+  .currencyIcon {
+    width: 10px;
+    height: 10px;
+  }
+  
+  .statusButton {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 3px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background: #fff;
+    padding: 5px 10px;
+    font-weight: 400;
+    cursor: pointer;
+  }
+  
+  .statusIcon {
+    width: 14px;
+    height: 14px;
+  }
+  
+  .inProgress {
+    color: #84388a;
+  }
+  
+  .failed {
+    color: #d94b4b;
+  }
+  
+  .success {
+    color: #39a459;
+  }
+  
+  @media (max-width: 991px) {
+    .claimBlock,
+    .amount {
+      max-width: 100%;
+    }
+  }

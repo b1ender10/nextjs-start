@@ -1,0 +1,55 @@
+@use "@/styles/mixins" as *;
+
+.incomeContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+
+  @include minus-768 {
+    text-align: center;
+  }
+}
+
+.title {
+  color: var(--Emerald, #01565b);
+  font: 700 40px Sora, sans-serif;
+  margin: 0;
+}
+
+.subtitle {
+  color: var(--Black, #232323);
+  margin-top: 26px;
+  font: 400 15px/26px SF Pro Text, -apple-system, Roboto, Helvetica, sans-serif;
+}
+
+
+.footer {
+  margin-top: 26px;
+  border-radius: 37px;
+  background-color: #fff;
+  padding: 20px;
+}
+
+.footerContent {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--Emerald, #01565b);
+  font: 500 13px/26px Inter, -apple-system, Roboto, Helvetica, sans-serif;
+
+  a {
+    color: var(--Emerald, #01565b);
+    text-decoration: underline;
+    
+    &:hover {
+      color: darken(#01565b, 10%);
+    }
+    
+    &:focus {
+      outline: 2px solid var(--Emerald, #01565b);
+      outline-offset: 2px;
+    }
+  }
+}
+

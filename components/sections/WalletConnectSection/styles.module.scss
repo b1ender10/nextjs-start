@@ -1,0 +1,40 @@
+.section {
+    border-radius: 37px;
+    background-color: rgba(255, 255, 255, 1);
+    display: flex;
+    padding-bottom: 20px;
+    flex-direction: column;
+    justify-content: start;
+  }
+  
+  .title {
+    flex: 1;
+    width: 100%;
+    gap: 20px;
+    color: var(--Black, #232323);
+    padding: 40px;
+    font: 500 19px Inter, sans-serif;
+  }
+  
+  @media (max-width: 991px) {
+    .title {
+      max-width: 100%;
+      padding: 20px;
+    }
+  }
+  
+  .cardContainer {
+    display: flex;
+    width: 100%;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px 40px;
+  }
+  
+  @media (max-width: 991px) {
+    .cardContainer {
+      max-width: 100%;
+      padding: 20px;
+    }
+  }
