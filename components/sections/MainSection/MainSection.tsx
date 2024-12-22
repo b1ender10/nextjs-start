@@ -4,6 +4,7 @@ import styles from "./styles.module.scss";
 
 import { useSelector } from "react-redux";
 import { RootState } from "@/store";
+import { FormSection } from "../FormSection/FormSection";
 
 interface MainSectionProps {
     theme?: "light" | "bright";
@@ -18,6 +19,7 @@ export const MainSection: React.FC<MainSectionProps> = ({theme = "light"}) => {
             <section className={`${styles.greenSection}`} role="banner">
                 {homeData?.FAQSectionTitle}
             </section>
+            <FormSection />
         </ContentWrapper>
     );
 };
