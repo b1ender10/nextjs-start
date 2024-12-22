@@ -10,7 +10,6 @@ const wrapperStyles = {
 }
 
 export const FAQSection: React.FC = () => {
-
   const homeData = useSelector((state: RootState) => state.homeReducer.home);
 
   return (

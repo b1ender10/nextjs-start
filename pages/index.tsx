@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
-import { TokenFeaturesSection, FAQSection, NewsSection, HeroHomeSection, GreenSection, TextWithImage } from "@/components/sections";
-import {ExchangesCard} from "@/components/cards"
+import { FAQSection, GreenSection } from "@/components/sections";
 import { RootState, storeWrapper } from "@/store";
 import { fetchAPI, useCloseModal } from "@/lib";
 import { setFooter, setHeader, setHome, setNews } from "@/store/homeSlice";
@@ -14,35 +13,16 @@ const LandingPage: React.FC = () => {
 
   return (
     <>
-      <HeroHomeSection />
       <GreenSection 
         title={homeData?.GreenSectionFutureTitle}
         description={homeData?.GreenSectionFutureDescription}
       />
-      <TextWithImage 
-        imageUrl="/images/home/FeatureSection1.png"
-        title={homeData?.TextWithImage1Title}
-        description={homeData?.TextWithImage1Description}
-        buttonText={homeData?.TextWithImage1Button}
-      />
-      <TextWithImage 
-        imageUrl="/images/home/FeatureSection2.png"
-        title={homeData?.TextWithImage2Title}
-        description={homeData?.TextWithImage2Description}
-        buttonText={homeData?.TextWithImage2Button}
-        isReverse
-      />
-
       <GreenSection 
         title={homeData?.GreenSectionSupportTitle}
         description={homeData?.GreenSectionSupportDescription}
       >
-        <ExchangesCard/>
       </GreenSection>
-      
-      <TokenFeaturesSection />
       <FAQSection />
-      <NewsSection />
     </>
   );
 };
